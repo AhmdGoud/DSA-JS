@@ -6,6 +6,7 @@
 // Indirect Recursion: Function A calls Function B, which calls Function A.
 // Tail Recursion: Recursive call is the last operation in the function, allowing some optimizations
 
+// reduce word
 function cleanWord(word) {
   if (word.length === 1) {
     return word;
@@ -31,9 +32,7 @@ console.log(fact(4)); // 24
 function checkWord(word) {
   if (word.length <= 1) {
     return "its a plaindrome";
-  }
-
-  if (word[0] === word[word.length - 1]) {
+  } else if (word[0] === word[word.length - 1]) {
     let sliced = word.slice(1, word.length - 1);
     return checkWord(sliced);
   } else {
@@ -41,3 +40,20 @@ function checkWord(word) {
   }
 }
 console.log(checkWord("racecar"));
+
+// reduce number
+function digitalRoot(num) {
+  const numToStr = num.toString();
+  let result = 0;
+  for (let n of numToStr) {
+    result += +n;
+  }
+
+  if (result.toString().length === 1) {
+    return result;
+  } else {
+    return digitalRoot(result);
+  }
+}
+console.log(digitalRoot(132189)); // 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
