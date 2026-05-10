@@ -41,8 +41,8 @@ stack.peek();
 stack.print();
 console.log("##");
 
-// ---------- //
-// using last //
+// ----------- //
+// another way //
 class TheStack {
   constructor() {
     this.items = [];
