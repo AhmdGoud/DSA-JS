@@ -22,3 +22,6 @@ function isBalanced(expression) {
 
   return stack.length === 0;
 }
+
+console.log(isBalanced("[()]")); // true
+console.log(isBalanced("{[()]")); // false
