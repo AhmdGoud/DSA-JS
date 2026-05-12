@@ -69,15 +69,15 @@ class Queue {
   }
 }
 
-const q1 = new Queue(5);
-q1.enqueue(1);
-q1.enqueue(2);
-q1.enqueue(3);
-q1.enqueue(4);
-q1.dequeue();
-q1.enqueue(5);
-q1.enqueue(6);
-console.log(q1.getItems());
-console.log(q1.getFront());
-console.log(q1.getBack());
-q1.print();
+const q = new Queue(5);
+q.enqueue(1);
+q.enqueue(2);
+q.enqueue(3);
+q.enqueue(4);
+q.dequeue();
+q.enqueue(5);
+q.enqueue(6);
+console.log(q.getItems());
+console.log(q.getFront());
+console.log(q.getBack());
+q.print();
