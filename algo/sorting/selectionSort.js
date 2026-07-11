@@ -1,8 +1,8 @@
-const arri = [40, 50, 30, 10, 20];
-
 // we start with the first item in the arr and compare it to the rest items of the arr
 // if greater then swap them if not we skip
 // then move to the seconed item and so on
+
+const arri = [40, 50, 30, 10, 20];
 
 function selection(ar) {
   const arr = ar;
@@ -19,6 +19,7 @@ function selection(ar) {
 }
 console.log(selection(arri)); // [10, 20, 30, 40, 50]
 
-// time complexity o(n2) - space complexity o(1)
+// time complexity o(n2) in all cases best and worst
+// space complexity o(1) it's in-space algorithm
 // Ascending order => min to max
 // descending order => max to min

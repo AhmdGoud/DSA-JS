@@ -1,3 +1,7 @@
+// we go 2 elements by 2 , for ex : index 1 with 2 then 2 with 3
+// if the item before is greate we swap
+// this in every pass makes sure we have the biggest number in last of arr
+
 const arri = [40, 50, 30, 10, 20];
 
 function bubble(ar) {
@@ -34,3 +38,4 @@ function bubble(ar) {
 }
 
 console.log(bubble(arri)); // [10, 20, 30, 40, 50]
+// time complexity o(n) in best case else o(n2) - space complexity o(1)
