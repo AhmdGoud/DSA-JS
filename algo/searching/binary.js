@@ -30,3 +30,31 @@ if (result !== -1) {
 } else {
   console.log("item is not in arr");
 }
+
+// search insert position.
+// return the index if the target is found.
+// If not, return the index where it would be if it were inserted in order.
+const searchInsert = function (nums, target) {
+  let s = 0;
+  let e = nums.length - 1;
+  let m = Math.floor((s + e) / 2);
+
+  while (e >= s) {
+    if (target === nums[m]) {
+      return m;
+    } else if (target > nums[m]) {
+      s = m + 1;
+      m = Math.floor((s + e) / 2);
+    } else {
+      e = m - 1;
+      m = Math.floor((s + e) / 2);
+    }
+  }
+
+  return s;
+};
+
+const nums = [1, 4, 6, 9, 13, 17, 33, 56, 78];
+const target = 11;
+
+console.log(searchInsert(nums, target));
